@@ -1,0 +1,2 @@
+RewriteEngine On
+ErrorDocument 404 https://vesta.uclan.ac.uk/~phadjidemetriou1/Hadjidemetriou-Panagiotis_G20965620_assignment_two/notFound.php

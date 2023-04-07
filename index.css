@@ -1,0 +1,766 @@
+/* styling the body of the page */
+body {
+  max-width: 90%;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/*################################################*/
+
+/*styling for haeder*/
+#header-content {
+  width: 100%;
+  padding: 5% 5% 0 5%;
+  background: #be1622;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*header logo image*/
+#uclanLogo {
+  width: 50%;
+  margin-left: 1em;
+  display: inline;
+}
+
+/*haeder h2 tags*/
+header h2 {
+  color: white;
+  font-size: 2.5vw;
+  display: inline;
+  position: relative;
+  bottom: 1em;
+  margin-left: 0.5em;
+}
+
+/*using media queries to check the screen size*/
+/*if screen width is larger than 480px*/
+@media screen and (min-width: 480px) {
+  /*navigation menu styling (desktop and tablet view)*/
+  .navMenu {
+    float: right;
+    display: flex;
+  }
+
+  /*hide phone view elements*/
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 25%;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+  #signupForm h1,
+  #loginForm h1 {
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+    color: #f2be1a;
+  }
+}
+/*if screen width is smaller than 480px*/
+@media screen and (max-width: 480px) {
+  /*hamburger and navigation menu styling (phone view)*/
+  .dropdown .dropbtn {
+    float: right;
+    width: 10%;
+  }
+
+  /*hide desktop and tablet view elements*/
+  .navMenu {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 100px;
+  }
+
+  .modal-content {
+    width: 60%;
+  }
+
+  #signupForm h1,
+  #loginForm h1 {
+    text-align: center;
+    font-size: medium;
+    text-decoration: underline;
+    color: #f2be1a;
+  }
+}
+
+/*navigation menu anchor tags*/
+.navMenu a {
+  color: white;
+  font-size: 1.7vw;
+  margin: 1em;
+  text-decoration: none;
+}
+
+/*navigation menu anchor tags when mouse hovers on them*/
+.navMenu a:hover {
+  color: #577a9b;
+}
+
+/*phone view navigation menu, is hidden*/
+#dropdown-content {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  background-color: #34516c;
+}
+
+/*phone view navigation menu, anchor tags*/
+#dropdown-content a {
+  color: white;
+  font-size: 1.7vw;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 16px;
+}
+
+/*phone view navigation menu, anchor tags when mouse hovers on them*/
+#dropdown-content a:hover {
+  background-color: #577a9b;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: whitesmoke;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+/* signup and login buttons */
+#log-btn {
+  display: block;
+  color: black;
+}
+
+#sign-btn {
+  display: none;
+  color: black;
+}
+
+#sign-btn :hover,
+#log-btn :hover {
+  background-color: gray;
+}
+
+#loginForm {
+  display: none;
+}
+
+/* Style all input fields */
+input:not(.dropbtn) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: " \2714";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: " \2718";
+}
+
+/*################################################*/
+
+/*styling for Home page main*/
+#home-main {
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+#specialOffers {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+#specialOffersHeader {
+  text-align: center;
+}
+
+.offer {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
+
+/*using media queries to check the screen size*/
+/*if screen width is larger than 600px*/
+@media screen and (min-width: 600px) {
+  #home-main {
+    width: 90%;
+  }
+  #specialOffers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*if screen width is smaller than 600px*/
+@media screen and (max-width: 600px) {
+  #home-main {
+    width: 60vw;
+  }
+  #specialOffers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*home page main headers*/
+#home-main h1 {
+  color: #34516c;
+  font-size: 4vw;
+}
+
+#home-main h2 {
+  color: #f2be1a;
+  font-size: 3vw;
+}
+
+/*home page main paragraphs*/
+#home-main p {
+  font-size: 2.5vw;
+}
+
+/*home page main videos*/
+.video {
+  width: 100%;
+}
+
+/*################################################*/
+
+/*styling for Products page main*/
+#products-section {
+  display: grid;
+}
+
+/*using media queries to check the screen size*/
+/*if screen width is larger than 480px*/
+@media screen and (min-width: 480px) {
+  #products-main {
+    padding-bottom: 30px;
+  }
+
+  /*product type sections styling*/
+  #products-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+  }
+
+  /*item info box*/
+  .prodInfo-box {
+    padding: 5px;
+  }
+
+  /*"top" navigation anchor tag*/
+  #top-btn {
+    left: 8px;
+    padding: 10px;
+  }
+
+  #searchForm,
+  #navForm {
+    margin-left: 20%;
+  }
+
+  #navForm {
+    padding-bottom: 25px;
+  }
+}
+/*if screen width is smaller than 480px*/
+@media screen and (max-width: 480px) {
+  #products-main {
+    padding: 30px 30px;
+  }
+
+  /*product type sections styling*/
+  #products-section {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+
+  /*item info box*/
+  .prodInfo-box {
+    padding: 10px;
+  }
+
+  /*"top" navigation anchor tag*/
+  #top-btn {
+    left: 5px;
+    padding: 5px;
+    font-size: small;
+  }
+
+  #searchForm #navForm {
+    margin-left: 5%;
+  }
+
+  #searchBtn,
+  .navProdBtns {
+    width: 50px;
+    height: 20px;
+    font-size: xx-small;
+  }
+
+  #navForm {
+    padding-bottom: 15px;
+  }
+}
+
+#products-main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#products-main h1 {
+  font-size: 4vw;
+  color: #f2be1a;
+}
+
+/*products page main headers and lists*/
+#products-main h2,
+h3 {
+  font-size: 3vw;
+  color: #f2be1a;
+}
+
+#products-main ul {
+  width: 100%;
+  font-size: 2vw;
+  list-style: none;
+}
+
+#products-main ul li {
+  display: inline;
+  padding: 10px 10px;
+}
+
+/*navigation menu at the top of the main*/
+.top-nav-el {
+  text-decoration: none;
+  color: #007fb0;
+}
+
+/*item info box headers and paragraphs*/
+.prodInfo-box {
+  background-color: whitesmoke;
+}
+
+.prodInfo-box h3 {
+  font-size: 2vw;
+}
+.prodInfo-box p {
+  font-size: 1.5vw;
+}
+
+/*item box image and button*/
+.prod-box {
+  width: 100%;
+  border: 1px solid whitesmoke;
+}
+
+.product-img {
+  width: 100%;
+}
+
+.buy-btn {
+  width: 35%;
+  height: 35%;
+  font-size: 1.8vw;
+  margin-left: 40%;
+}
+
+/*"top" navigation anchor tag*/
+#top-btn {
+  position: fixed;
+  top: 50%;
+  color: white;
+  background-color: #34516c;
+  text-decoration: none;
+  border-radius: 100%;
+}
+
+/*################################################*/
+
+/*Item page main styling */
+#item-main {
+  width: 70%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 16%;
+}
+
+#avgRate {
+  text-align: center;
+}
+
+/* styling reviews */
+#review {
+  width: 100%;
+  margin-left: 4%;
+  overflow: hidden;
+}
+
+#prevReviews {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  margin-bottom: 30px;
+  margin-left: 5%;
+}
+
+.review-box {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  align-self: center;
+  background-color: whitesmoke;
+}
+
+.review-box h2 {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.review-box h3 {
+  font-size: 3vw;
+}
+
+.review-box p {
+  font-size: 2vw;
+}
+
+#reviewInfo-box {
+  margin: 5px;
+  margin-left: 5%;
+}
+
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
+  background-color: wheat;
+  margin-bottom: 5%;
+}
+
+#reviewForm label {
+  margin: 5px 0;
+}
+
+#reviewForm input {
+  width: 90%;
+}
+
+#reviewForm h2 {
+  text-align: center;
+}
+
+#reviewSubmitBtn {
+  margin: 10px;
+  width: 30%;
+  align-self: center;
+}
+
+/*if screen width is larger than 530px*/
+@media screen and (min-width: 530px) {
+  #reviewForm,
+  .review-box {
+    font-size: medium;
+    padding-left: 10px;
+  }
+
+  #prevReviews {
+    padding-left: 10px;
+  }
+
+  #reviewForm input {
+    height: 15px;
+  }
+}
+/*if screen width is smaller than 530px*/
+@media screen and (max-width: 530px) {
+  #reviewForm,
+  .review-box {
+    font-size: x-small;
+    padding-left: 5px;
+  }
+
+  #prevReviews {
+    padding-left: 5px;
+  }
+
+  #reviewForm input {
+    height: 10px;
+  }
+}
+
+/*################################################*/
+
+/*Cart page main styling */
+#cart-main {
+  width: 65%;
+  padding-top: 30px;
+  padding-bottom: 30%;
+}
+
+/*cart main headers*/
+#cart-main h2 {
+  color: #f2be1a;
+  font-size: large;
+  text-decoration: underline;
+}
+
+/*section with two titles*/
+#cart-item-titles {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+}
+
+/*section where cart items are displayed*/
+#cart-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10%;
+}
+
+/*cart item box*/
+.cart-item-box {
+  background-color: whitesmoke;
+  padding: 0 10px;
+  display: flex;
+}
+
+/*cart item box image section*/
+.cart-item-img {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  text-align: center;
+}
+
+/*cart item box image*/
+.cart-item-img img {
+  padding-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+/* text to show user the cart is empty*/
+#empty-cart {
+  padding: 30% 0;
+}
+
+/*button to delete an item from the cart*/
+.deleteItem-btn {
+  width: 40px;
+  height: 20px;
+  margin-top: 15px;
+  font-size: xx-small;
+}
+
+/*two buttons for checkout en empty cart functionality*/
+#cartManagment-btns {
+  margin-top: 10px;
+  left: 10px;
+  width: 10%;
+  height: 5%;
+  font-size: 1.7vw;
+}
+
+#checkoutModalContent,
+#logoutModalContent {
+  width: 40%;
+}
+
+/*if screen width is larger than 530px*/
+@media screen and (min-width: 530px) {
+  /*change main padding left*/
+  #cart-main {
+    padding-left: 23%;
+  }
+
+  /*cart item box*/
+  .cart-item-box {
+    column-gap: 5%;
+  }
+
+  #checkoutModal h1,
+  #logoutModalContent p {
+    font-size: medium;
+  }
+}
+/*if screen width is smaller than 530px*/
+@media screen and (max-width: 530px) {
+  /*change main padding left*/
+  #cart-main {
+    padding-left: 15%;
+  }
+
+  /*cart item box*/
+  .cart-item-box {
+    column-gap: 5px;
+  }
+
+  #checkoutModal h1,
+  #logoutModalContent p {
+    font-size: small;
+  }
+}
+
+/*if screen width is smaller than 380px*/
+@media screen and (max-width: 380px) {
+  /*change main padding left*/
+  #cart-main {
+    padding-left: 10%;
+  }
+}
+#pendingOrders {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+}
+
+#pendingOrders h3 {
+  color: #f2be1a;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.order-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 2vw;
+  background-color: whitesmoke;
+}
+
+/*################################################*/
+
+/*styling for footer*/
+footer {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  padding: 5%;
+  background-color: #34516c;
+  bottom: 0;
+}
+
+/*styling for footer column section*/
+.colum {
+  padding: 0px 15px 15px 15px;
+  color: white;
+  text-align: left;
+  display: inline;
+}
+
+/*column section headers*/
+.colum h2 {
+  font-size: 2.2vw;
+  margin: 0;
+  padding: 0;
+}
+
+/*column section paragraphs*/
+.colum p {
+  font-size: 1.4vw;
+  padding: 5px 0px 5px 0px;
+}
+
+/*column section achor tags in paragraph*/
+.colum p a {
+  color: #007fb0;
+}
+
+#errImg {
+  width: 110%;
+}
+
+#goHome {
+  position: fixed;
+  top: 2.5%;
+  left: 20px;
+  font-size: 2vw;
+}
